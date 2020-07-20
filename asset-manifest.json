@@ -1,0 +1,17 @@
+{
+  "main.css": "/Chess/static/css/main.bf3f718d.chunk.css",
+  "main.js": "/Chess/static/js/main.52e47214.chunk.js",
+  "main.js.map": "/Chess/static/js/main.52e47214.chunk.js.map",
+  "runtime~main.js": "/Chess/static/js/runtime~main.223294b9.js",
+  "runtime~main.js.map": "/Chess/static/js/runtime~main.223294b9.js.map",
+  "static/css/2.c7f767dc.chunk.css": "/Chess/static/css/2.c7f767dc.chunk.css",
+  "static/js/2.7a4e4e3f.chunk.js": "/Chess/static/js/2.7a4e4e3f.chunk.js",
+  "static/js/2.7a4e4e3f.chunk.js.map": "/Chess/static/js/2.7a4e4e3f.chunk.js.map",
+  "index.html": "/Chess/index.html",
+  "precache-manifest.975d1e9f7a470ab12e3f39f7941311ae.js": "/Chess/precache-manifest.975d1e9f7a470ab12e3f39f7941311ae.js",
+  "service-worker.js": "/Chess/service-worker.js",
+  "static/css/2.c7f767dc.chunk.css.map": "/Chess/static/css/2.c7f767dc.chunk.css.map",
+  "static/css/main.bf3f718d.chunk.css.map": "/Chess/static/css/main.bf3f718d.chunk.css.map",
+  "static/media/blackKing.png": "/Chess/static/media/blackKing.e1af0182.png",
+  "static/media/blackQueen.png": "/Chess/static/media/blackQueen.b360036b.png"
+}
