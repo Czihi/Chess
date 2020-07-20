@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+.Board{
+  max-width: 1200px;
+  max-height: 600px;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.Figure{
+  max-width: 75px;
+  max-height: 50%;
+}
+
+.container {
+  position:relative;
+}
+
+.bQ {
+  position: absolute;
+  left: 225px;
+  top: 0;
+}
+.bK {
+  position: absolute;
+  left: 300px;
+  top: 0;
+}
+.bP {
+  position: absolute;
+  left: 300px;
+  top: 75px;
+}
