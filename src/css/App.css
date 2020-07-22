@@ -30,6 +30,11 @@
 }
 .bP {
   position: absolute;
-  left: 300px;
+  left: 0;
   top: 75px;
+}
+.wP {
+  position: absolute;
+  left: 0;
+  top:450px;
 }
