@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import wP from "../images/whitePawn.png"
 
 
@@ -15,7 +15,7 @@ const WhitePawnPiece = (props) => {
         let offLeft = Math.floor(wp.offsetLeft / 75);
         if (x1 >= 0 && x1 <= 600 && y1 >= 0 && y1 <= 600) {
             if (offLeft === x &&
-                (offTop === y + 1 || (offTop === y + 2 && y + 2 === 6)) &&
+                (offTop === y + 1 || (offTop === y + 2 && y + 2 === 6 && props.figures[y+1][x]==="free")) &&
                 props.figures[y][x] === "free") {
                 wp.style.left = `${x * 75}px`;
                 wp.style.top = `${y * 75}px`;
@@ -25,6 +25,19 @@ const WhitePawnPiece = (props) => {
                 newFigures[offTop][offLeft] = "free";
                 props.setState({figures: newFigures});
                 props.setState({turn: "black"})
+            }
+            else{
+                let fig=props.figures[y][x].split(" ");
+                if(offTop === y+1 && (offLeft===x+1 || offLeft===x-1) && fig[0]==="black"){
+                    document.getElementById(fig[1]).style.display="none";
+                    wp.style.left = `${x * 75}px`;
+                    wp.style.top = `${y * 75}px`;
+                    let newFigures = [...props.figures];
+                    newFigures[y][x] = "white wp" + id;
+                    newFigures[offTop][offLeft] = "free";
+                    props.setState({figures: newFigures});
+                    props.setState({turn: "black"});
+                }
             }
         }
         document.removeEventListener('click', move)
@@ -39,13 +52,9 @@ const WhitePawnPiece = (props) => {
         }
     }
 
-    useEffect(() => {
-        let wpT = document.getElementById("wp" + id);
-        wpT.style.left = `${id * 75}px`
-    });
 
     return (
-        <img id={"wp" + id} className="Figure wP" src={wP} alt="wP" onClick={choosePiece}/>
+        <img id={"wp" + id} className={"Figure wP"+id} src={wP} alt="wP" onClick={choosePiece}/>
     )
 
 };

@@ -10,8 +10,9 @@ const BlackQueenPiece=(props)=>{
         let x = Math.floor(event.clientX / 75);
         let y = Math.floor(event.clientY / 75);
         let offTop = Math.floor(bq.offsetTop / 75);
-        let offLeft = Math.floor(bq.offsetLeft / 75)
-        if (x1 >= 0 && x1 <= 600 && y1 >= 0 && y1 <= 600) {
+        let offLeft = Math.floor(bq.offsetLeft / 75);
+        let obstacle = false;
+        if (x1 >= 0 && x1 <= 600 && y1 >= 0 && y1 <= 600 && !obstacle) {
             if ((Math.abs(offLeft - x) === Math.abs(offTop - y)) || (offLeft === x) || (offTop===y)) {
                 if (props.figures[y][x] === "free") {
                     bq.style.left = `${x * 75}px`;
@@ -21,6 +22,7 @@ const BlackQueenPiece=(props)=>{
                     newFigures[y][x] = "black bq";
                     newFigures[offTop][offLeft] = "free";
                     props.setState({figures: newFigures});
+                    props.setState({turn: "white"})
                 }else{
                     let fig=props.figures[y][x].split(" ");
                     if(fig[0] === "white"){

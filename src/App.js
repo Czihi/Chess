@@ -11,14 +11,14 @@ import Chessboard from "./components/Chessboard";
 class App extends Component {
 
     state = {
-        figures: [["black", "black", "black", "black bq", "black bk", "black", "black", "black"],
+        figures: [["black br0", "black bn0", "black bb0", "black bq", "black bk", "black bb1", "black bn1", "black br1"],
             ["black bp0", "black bp1", "black bp2", "black bp3", "black bp4", "black bp5", "black bp6", "black bp7"],
             ["free", "free", "free", "free", "free", "free", "free", "free"],
             ["free", "free", "free", "free", "free", "free", "free", "free"],
             ["free", "free", "free", "free", "free", "free", "free", "free"],
             ["free", "free", "free", "free", "free", "free", "free", "free"],
             ["white wp0", "white wp1", "white wp2", "white wp3", "white wp4", "white wp5", "white wp6", "white wp7"],
-            ["white", "white", "white", "white", "white", "white", "white", "white"]],
+            ["white wr0", "white wn0", "white wb0", "white", "white", "white wb1", "white wn1", "white wr1"]],
         turn: "white"
     };
 

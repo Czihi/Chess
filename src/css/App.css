@@ -17,7 +17,11 @@
 .container {
   position:relative;
 }
-
+.bN0{
+    position: absolute;
+    left: 75px;
+    top: 0;
+}
 .bQ {
   position: absolute;
   left: 225px;
@@ -28,13 +32,123 @@
   left: 300px;
   top: 0;
 }
-.bP {
-  position: absolute;
-  left: 0;
-  top: 75px;
+.bN1{
+    position: absolute;
+    left: 450px;
+    top: 0;
 }
-.wP {
+.bP0 {
   position: absolute;
   left: 0;
+  top:75px;
+}
+.bP1 {
+  position: absolute;
+  left: 75px;
+  top:75px;
+}
+.bP2 {
+  position: absolute;
+  left: 150px;
+  top:75px;
+}
+.bP3 {
+  position: absolute;
+  left: 225px;
+  top:75px;
+}
+.bP4 {
+  position: absolute;
+  left: 300px;
+  top:75px;
+}
+.bP5 {
+  position: absolute;
+  left: 375px;
+  top:75px;
+}
+.bP6 {
+  position: absolute;
+  left: 450px;
+  top:75px;
+}
+.bP7 {
+  position: absolute;
+  left: 525px;
+  top:75px;
+}
+.wP0 {
+   position: absolute;
+   left: 0;
+   top:450px;
+ }
+.wP1 {
+  position: absolute;
+  left: 75px;
   top:450px;
+}
+.wP2 {
+  position: absolute;
+  left: 150px;
+  top:450px;
+}
+.wP3 {
+  position: absolute;
+  left: 225px;
+  top:450px;
+}
+.wP4 {
+  position: absolute;
+  left: 300px;
+  top:450px;
+}
+.wP5 {
+  position: absolute;
+  left: 375px;
+  top:450px;
+}
+.wP6 {
+  position: absolute;
+  left: 450px;
+  top:450px;
+}
+.wP7 {
+  position: absolute;
+  left: 525px;
+  top:450px;
+}
+.wR0{
+    position: absolute;
+    left: 0;
+    top: 525px;
+}
+.wN0{
+    position: absolute;
+    left: 75px;
+    top: 525px;
+}
+.wB0{
+  position:absolute;
+  left: 150px;
+  top:525px;
+}
+.wK{
+    position:absolute;
+    left: 300px;
+    top: 525px;
+}
+.wB1{
+  position: absolute;
+  left: 375px;
+  top: 525px;
+}
+.wN1{
+    position: absolute;
+    left: 450px;
+    top: 525px;
+}
+.wR1{
+    position: absolute;
+    left: 525px;
+    top: 525px;
 }
