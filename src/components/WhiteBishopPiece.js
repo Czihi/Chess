@@ -100,7 +100,7 @@ const WhiteBishopPiece = (props) => {
     }
 
     return (
-        <img id={"wb"+id} className={"Figure wB"+id} src={wB} alt="wB" onClick={choosePiece}/>
+        <img id={"wb"+id} className={"Figure wB"+id} src={wB} alt="wB" onMouseDownCapture={choosePiece}/>
     )
 };
 export default WhiteBishopPiece;

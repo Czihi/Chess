@@ -15,8 +15,8 @@ import WhiteRookPiece from "./WhiteRookPiece";
 
 const Chessboard = (props) => {
     return (
-        <div id="container">
-            <img className="Board" src={board} id="board" alt="board"/>
+        <div id="container" draggable="false">
+            <img className="Board" src={board} id="board" draggable="false" alt="board"/>
             <BlackRookPiece
                 figures={props.figures}
                 setState={props.setState}

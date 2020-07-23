@@ -141,7 +141,7 @@ const WhiteQueenPiece = (props) => {
     }
 
     return (
-        <img id="wq" className="Figure wQ" src={wQ} alt="wQ" onClick={choosePiece}/>
+        <img id="wq" className="Figure wQ" src={wQ} alt="wQ" onMouseDownCapture={choosePiece}/>
     )
 };
 export default WhiteQueenPiece;

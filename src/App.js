@@ -29,7 +29,7 @@ class App extends Component {
                 <Route path="/Chess" exact render={
                     () => {
                         return (
-                            <div className="App">
+                            <div className="App" draggable="false">
                                 <Chessboard
                                     setState={(s,c)=>this.setState(s, c)}
                                     figures={this.state.figures}

@@ -87,7 +87,7 @@ const WhiteRookPiece = (props) => {
     }
 
     return (
-        <img id={"wr"+id} className={"Figure wR"+id} src={wR} alt="wR" onClick={choosePiece}/>
+        <img id={"wr"+id} className={"Figure wR"+id} src={wR} alt="wR" onMouseDownCapture={choosePiece}/>
     )
 };
 export default WhiteRookPiece;

@@ -53,7 +53,7 @@ const BlackPawnPiece = (props) => {
 
 
     return (
-        <img id={"bp" + id} className={"Figure bP"+id} src={bP} alt="bP" onClick={choosePiece}/>
+        <img id={"bp" + id} className={"Figure bP"+id} src={bP} alt="bP" onMouseDownCapture={choosePiece}/>
     )
 
 };

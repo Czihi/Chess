@@ -54,7 +54,7 @@ const WhitePawnPiece = (props) => {
 
 
     return (
-        <img id={"wp" + id} className={"Figure wP"+id} src={wP} alt="wP" onClick={choosePiece}/>
+        <img id={"wp" + id} className={"Figure wP"+id} src={wP} alt="wP"  onMouseDownCapture={choosePiece}/>
     )
 
 };

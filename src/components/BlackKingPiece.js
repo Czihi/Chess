@@ -54,7 +54,7 @@ const BlackKingPiece = (props) => {
     }
 
     return (
-        <img id="bk" className="Figure bK" src={bK} alt="bK" onClick={choosePiece}/>
+        <img id="bk" className="Figure bK" src={bK} alt="bK" onMouseDownCapture={choosePiece}/>
     )
 };
 export default BlackKingPiece;
