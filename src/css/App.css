@@ -17,10 +17,20 @@
 .container {
   position:relative;
 }
+.bR0{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 .bN0{
     position: absolute;
     left: 75px;
     top: 0;
+}
+.bB0{
+    position:absolute;
+    left: 150px;
+    top:0;
 }
 .bQ {
   position: absolute;
@@ -32,9 +42,19 @@
   left: 300px;
   top: 0;
 }
+.bB1{
+    position:absolute;
+    left: 375px;
+    top:0;
+}
 .bN1{
     position: absolute;
     left: 450px;
+    top: 0;
+}
+.bR1{
+    position: absolute;
+    left: 525px;
     top: 0;
 }
 .bP0 {
@@ -131,6 +151,11 @@
   position:absolute;
   left: 150px;
   top:525px;
+}
+.wQ {
+    position: absolute;
+    left: 225px;
+    top: 525px;
 }
 .wK{
     position:absolute;

@@ -18,7 +18,7 @@ class App extends Component {
             ["free", "free", "free", "free", "free", "free", "free", "free"],
             ["free", "free", "free", "free", "free", "free", "free", "free"],
             ["white wp0", "white wp1", "white wp2", "white wp3", "white wp4", "white wp5", "white wp6", "white wp7"],
-            ["white wr0", "white wn0", "white wb0", "white", "white", "white wb1", "white wn1", "white wr1"]],
+            ["white wr0", "white wn0", "white wb0", "white wq", "white wk", "white wb1", "white wn1", "white wr1"]],
         turn: "white"
     };
 

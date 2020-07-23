@@ -25,6 +25,20 @@ const BlackKingPiece = (props) => {
                     props.setState({figures: newFigures});
                     props.setState({turn: "white"})
                 }
+                else{
+                    let fig=props.figures[y][x].split(" ");
+                    if(fig[0] === "white"){
+                        document.getElementById(fig[1]).style.display="none";
+                        bk.style.left = `${x * 75}px`;
+                        bk.style.top = `${y * 75}px`;
+
+                        let newFigures = [...props.figures];
+                        newFigures[y][x] = "black bk";
+                        newFigures[offTop][offLeft] = "free";
+                        props.setState({figures: newFigures});
+                        props.setState({turn: "white"})
+                    }
+                }
             }
         }
       document.removeEventListener('click', move)

@@ -1,16 +1,16 @@
 import React from "react";
-import bQ from "../images/blackQueen.png";
+import wQ from "../images/whiteQueen.png";
 
 
-const BlackQueenPiece = (props) => {
+const WhiteQueenPiece = (props) => {
     function move(event) {
         let y1 = event.clientY;
         let x1 = event.clientX;
-        let bq = document.getElementById("bq");
+        let wq = document.getElementById("wq");
         let x = Math.floor(event.clientX / 75);
         let y = Math.floor(event.clientY / 75);
-        let offTop = Math.floor(bq.offsetTop / 75);
-        let offLeft = Math.floor(bq.offsetLeft / 75);
+        let offTop = Math.floor(wq.offsetTop / 75);
+        let offLeft = Math.floor(wq.offsetLeft / 75);
         let flag = false;
         if (y === offTop || x === offLeft) {
             flag = true;
@@ -104,44 +104,44 @@ const BlackQueenPiece = (props) => {
         if (x1 >= 0 && x1 <= 600 && y1 >= 0 && y1 <= 600 && !obstacle) {
             if ((Math.abs(offLeft - x) === Math.abs(offTop - y)) || (offLeft === x) || (offTop === y)) {
                 if (props.figures[y][x] === "free") {
-                    bq.style.left = `${x * 75}px`;
-                    bq.style.top = `${y * 75}px`;
+                    wq.style.left = `${x * 75}px`;
+                    wq.style.top = `${y * 75}px`;
 
                     let newFigures = [...props.figures];
-                    newFigures[y][x] = "black bq";
+                    newFigures[y][x] = "white wq";
                     newFigures[offTop][offLeft] = "free";
                     props.setState({figures: newFigures});
-                    props.setState({turn: "white"})
+                    props.setState({turn: "black"})
                 } else {
                     let fig = props.figures[y][x].split(" ");
-                    if (fig[0] === "white") {
+                    if (fig[0] === "black") {
                         document.getElementById(fig[1]).style.display = "none"
-                        bq.style.left = `${x * 75}px`;
-                        bq.style.top = `${y * 75}px`;
+                        wq.style.left = `${x * 75}px`;
+                        wq.style.top = `${y * 75}px`;
 
                         let newFigures = [...props.figures];
-                        newFigures[y][x] = "black bq";
+                        newFigures[y][x] = "white wq";
                         newFigures[offTop][offLeft] = "free";
                         props.setState({figures: newFigures});
-                        props.setState({turn: "white"})
+                        props.setState({turn: "black"})
                     }
                 }
             }
         }
         document.removeEventListener('click', move)
-        bq.style.backgroundColor = "transparent";
+        wq.style.backgroundColor = "transparent";
     }
 
     function choosePiece() {
-        if (props.turn === "black") {
+        if (props.turn === "white") {
             document.addEventListener('click', move);
-            let bq = document.getElementById("bq")
-            bq.style.backgroundColor = "#aaaaaa";
+            let wq = document.getElementById("wq")
+            wq.style.backgroundColor = "#aaaaaa";
         }
     }
 
     return (
-        <img id="bq" className="Figure bQ" src={bQ} alt="bQ" onClick={choosePiece}/>
+        <img id="wq" className="Figure wQ" src={wQ} alt="wQ" onClick={choosePiece}/>
     )
 };
-export default BlackQueenPiece;
+export default WhiteQueenPiece;
