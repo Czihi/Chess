@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+    overscroll-behavior: contain;
 }
 .Board{
   max-width: 1200px;
