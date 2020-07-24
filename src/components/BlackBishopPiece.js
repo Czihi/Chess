@@ -74,15 +74,19 @@ const BlackBishopPiece = (props) => {
                 }else{
                     let fig=props.figures[y][x].split(" ");
                     if(fig[0] === "white"){
-                        document.getElementById(fig[1]).style.display="none"
+                        document.getElementById(fig[1]).style.display="none";
                         bb.style.left = `${x * 75}px`;
                         bb.style.top = `${y * 75}px`;
+
+                        let newPiecesTaken = [...props.piecesTaken];
+                        newPiecesTaken.push(props.figures[y][x]);
 
                         let newFigures = [...props.figures];
                         newFigures[y][x] = "black bb"+id;
                         newFigures[offTop][offLeft] = "free";
-                        props.setState({figures: newFigures});
-                        props.setState({turn: "white"})
+
+                        props.setState({figures: newFigures, piecesTaken: newPiecesTaken});
+                        props.setState({turn: "white"});
                     }
                 }
             }

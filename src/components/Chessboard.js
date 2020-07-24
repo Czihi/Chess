@@ -22,94 +22,110 @@ const Chessboard = (props) => {
                 setState={props.setState}
                 turn={props.turn}
                 rookID={0}
+                piecesTaken={props.piecesTaken}
             />
             <BlackKnightPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
                 knightID={0}
+                piecesTaken={props.piecesTaken}
             />
             <BlackBishopPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
                 bishopID={0}
+                piecesTaken={props.piecesTaken}
             />
             <BlackKingPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <BlackQueenPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <BlackBishopPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
                 bishopID={1}
+                piecesTaken={props.piecesTaken}
             />
             <BlackKnightPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
                 knightID={1}
+                piecesTaken={props.piecesTaken}
             />
             <BlackRookPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
                 rookID={1}
+                piecesTaken={props.piecesTaken}
             />
             <BlackPawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={0}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <BlackPawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={1}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <BlackPawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={2}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <BlackPawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={3}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <BlackPawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={4}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <BlackPawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={5}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <BlackPawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={6}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <BlackPawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={7}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
 
             <WhitePawnPiece
@@ -117,94 +133,110 @@ const Chessboard = (props) => {
                 setState={props.setState}
                 pawnID={0}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <WhitePawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={1}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <WhitePawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={2}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <WhitePawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={3}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <WhitePawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={4}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <WhitePawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={5}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <WhitePawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={6}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <WhitePawnPiece
                 figures={props.figures}
                 setState={props.setState}
                 pawnID={7}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <WhiteRookPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
                 rookID={0}
+                piecesTaken={props.piecesTaken}
             />
             <WhiteKnightPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
                 knightID={0}
+                piecesTaken={props.piecesTaken}
             />
             <WhiteBishopPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
                 bishopID={0}
+                piecesTaken={props.piecesTaken}
             />
             <WhiteQueenPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <WhiteKingPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
+                piecesTaken={props.piecesTaken}
             />
             <WhiteBishopPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
                 bishopID={1}
+                piecesTaken={props.piecesTaken}
             />
             <WhiteKnightPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
                 knightID={1}
+                piecesTaken={props.piecesTaken}
             />
             <WhiteRookPiece
                 figures={props.figures}
                 setState={props.setState}
                 turn={props.turn}
                 rookID={1}
+                piecesTaken={props.piecesTaken}
             />
         </div>
     )

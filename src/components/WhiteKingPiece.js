@@ -31,10 +31,12 @@ const WhiteKingPiece = (props) => {
                         document.getElementById(fig[1]).style.display="none";
                         wk.style.left = `${x * 75}px`;
                         wk.style.top = `${y * 75}px`;
+                        let newPiecesTaken = [...props.piecesTaken];
+                        newPiecesTaken.push(props.figures[y][x]);
                         let newFigures = [...props.figures];
                         newFigures[y][x] = "white wk";
                         newFigures[offTop][offLeft] = "free";
-                        props.setState({figures: newFigures});
+                        props.setState({figures: newFigures, piecesTaken: newPiecesTaken});
                         props.setState({turn: "black"})
                     }
                 }

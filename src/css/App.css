@@ -31,7 +31,23 @@
     -o-user-select: none;
     -khtml-user-select: none;
 }
+.gameTable{
+    position:absolute;
+    left:600px;
+    top:0;
+    max-width: 15%;
+    height: 600px;
+}
+.turn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.MiniFigure{
+    max-width: 40px;
 
+}
 .container {
   position:relative;
 }

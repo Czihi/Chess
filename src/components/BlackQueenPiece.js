@@ -118,11 +118,12 @@ const BlackQueenPiece = (props) => {
                         document.getElementById(fig[1]).style.display = "none"
                         bq.style.left = `${x * 75}px`;
                         bq.style.top = `${y * 75}px`;
-
+                        let newPiecesTaken = [...props.piecesTaken];
+                        newPiecesTaken.push(props.figures[y][x]);
                         let newFigures = [...props.figures];
                         newFigures[y][x] = "black bq";
                         newFigures[offTop][offLeft] = "free";
-                        props.setState({figures: newFigures});
+                        props.setState({figures: newFigures, piecesTaken: newPiecesTaken});
                         props.setState({turn: "white"})
                     }
                 }

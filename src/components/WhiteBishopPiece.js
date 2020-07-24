@@ -77,11 +77,12 @@ const WhiteBishopPiece = (props) => {
                         document.getElementById(fig[1]).style.display="none"
                         wb.style.left = `${x * 75}px`;
                         wb.style.top = `${y * 75}px`;
-
+                        let newPiecesTaken = [...props.piecesTaken];
+                        newPiecesTaken.push(props.figures[y][x]);
                         let newFigures = [...props.figures];
                         newFigures[y][x] = "white wb"+id;
                         newFigures[offTop][offLeft] = "free";
-                        props.setState({figures: newFigures});
+                        props.setState({figures: newFigures, piecesTaken: newPiecesTaken});
                         props.setState({turn: "black"})
                     }
                 }

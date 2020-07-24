@@ -64,11 +64,12 @@ const BlackRookPiece = (props) => {
                         document.getElementById(fig[1]).style.display="none"
                         br.style.left = `${x * 75}px`;
                         br.style.top = `${y * 75}px`;
-
+                        let newPiecesTaken = [...props.piecesTaken];
+                        newPiecesTaken.push(props.figures[y][x]);
                         let newFigures = [...props.figures];
                         newFigures[y][x] = "black br"+id;
                         newFigures[offTop][offLeft] = "free";
-                        props.setState({figures: newFigures});
+                        props.setState({figures: newFigures, piecesTaken: newPiecesTaken});
                         props.setState({turn: "white"})
                     }
                 }
