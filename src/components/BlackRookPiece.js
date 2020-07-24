@@ -1,14 +1,25 @@
 import React from "react";
 import bR from "../images/blackRook.png";
+import mobile from "./Mobile";
 
 const BlackRookPiece = (props) => {
     const id=props.rookID;
     function move(event) {
-        let y1 = event.clientY;
-        let x1 = event.clientX;
+        let x1;
+        let y1;
+        if(mobile){
+            let evt = (typeof event.originalEvent === 'undefined') ? event : event.originalEvent;
+            let touch = evt.touches[0] || evt.changedTouches[0];
+            x1 = touch.pageX.toFixed(0);
+            y1 = touch.pageY.toFixed(0);
+        }
+        else{
+            y1 = event.clientY;
+            x1 = event.clientX;
+        }
         let br = document.getElementById("br"+id);
-        let x = Math.floor(event.clientX / 75);
-        let y = Math.floor(event.clientY / 75);
+        let x = Math.floor(x1 / 75);
+        let y = Math.floor(y1 / 75);
         let offTop = Math.floor(br.offsetTop / 75);
         let offLeft = Math.floor(br.offsetLeft / 75);
         let obstacle=false;
@@ -75,19 +86,21 @@ const BlackRookPiece = (props) => {
                 }
             }
         }
-        document.removeEventListener('click', move)
+        document.removeEventListener('touchend', move);
+        document.removeEventListener('mouseup', move);
         br.style.backgroundColor="transparent";
     }
 
     function choosePiece() {
         if(props.turn==="black") {
-            document.addEventListener('click', move);
+            document.addEventListener('touchend', move);
+            document.addEventListener('mouseup', move);
             let br = document.getElementById("br"+id);
             br.style.backgroundColor = "#aaaaaa";
         }
     }
 
-    return (
+    return (mobile ? <img id={"br"+id} className={"Figure bR"+id} src={bR} alt="bR" onTouchStartCapture={choosePiece}/>:
         <img id={"br"+id} className={"Figure bR"+id} src={bR} alt="bR" onMouseDownCapture={choosePiece}/>
     )
 };

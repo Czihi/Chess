@@ -1,13 +1,24 @@
 import React from "react";
 import bK from "../images/blackKing.png";
+import mobile from "./Mobile";
 
 const BlackKingPiece = (props) => {
     function move(event) {
-        let y1 = event.clientY;
-        let x1 = event.clientX;
+        let x1;
+        let y1;
+        if(mobile){
+            let evt = (typeof event.originalEvent === 'undefined') ? event : event.originalEvent;
+            let touch = evt.touches[0] || evt.changedTouches[0];
+            x1 = touch.pageX.toFixed(0);
+            y1 = touch.pageY.toFixed(0);
+        }
+        else{
+            y1 = event.clientY;
+            x1 = event.clientX;
+        }
         let bk = document.getElementById("bk");
-        let x = Math.floor(event.clientX / 75);
-        let y = Math.floor(event.clientY / 75);
+        let x = Math.floor(x1 / 75);
+        let y = Math.floor(y1 / 75);
         let offTop = Math.floor(bk.offsetTop / 75);
         let offLeft = Math.floor(bk.offsetLeft / 75)
         if (x1 >= 0 && x1 <= 600 && y1 >= 0 && y1 <= 600) {
@@ -44,20 +55,23 @@ const BlackKingPiece = (props) => {
                 }
             }
         }
-      document.removeEventListener('click', move)
+        document.removeEventListener('touchend', move);
+        document.removeEventListener('mouseup', move);
       bk.style.backgroundColor="transparent";
     }
 
     function choosePiece() {
         if(props.turn==="black") {
-            document.addEventListener('click', move);
+            document.addEventListener('touchend', move);
+            document.addEventListener('mouseup', move);
             let bk = document.getElementById("bk")
             bk.style.backgroundColor = "#aaaaaa";
         }
     }
 
-    return (
-        <img id="bk" className="Figure bK" src={bK} alt="bK" onMouseDownCapture={choosePiece}/>
+    return (mobile ?
+        <img id="bk" className="Figure bK" src={bK} alt="bK" onTouchStartCapture={choosePiece}/>:
+    <img id="bk" className="Figure bK" src={bK} alt="bK" onMouseDownCapture={choosePiece}/>
     )
 };
 export default BlackKingPiece;

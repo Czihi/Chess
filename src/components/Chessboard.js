@@ -14,6 +14,7 @@ import WhiteKnightPiece from "./WhiteKnightPiece";
 import WhiteRookPiece from "./WhiteRookPiece";
 
 const Chessboard = (props) => {
+
     return (
         <div id="container" draggable="false">
             <img className="Board" src={board} id="board" draggable="false" alt="board"/>

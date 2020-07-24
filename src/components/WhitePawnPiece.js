@@ -1,16 +1,27 @@
 import React from "react";
 import wP from "../images/whitePawn.png"
-
+import mobile from "./Mobile";
 
 const WhitePawnPiece = (props) => {
     const id = props.pawnID;
 
+
     function move(event) {
-        let y1 = event.clientY;
-        let x1 = event.clientX;
+        let x1;
+        let y1;
+        if(mobile){
+            let evt = (typeof event.originalEvent === 'undefined') ? event : event.originalEvent;
+            let touch = evt.touches[0] || evt.changedTouches[0];
+            x1 = touch.pageX.toFixed(0);
+            y1 = touch.pageY.toFixed(0);
+        }
+        else{
+            y1 = event.clientY;
+            x1 = event.clientX;
+        }
         let wp = document.getElementById("wp" + id);
-        let x = Math.floor(event.clientX / 75);
-        let y = Math.floor(event.clientY / 75);
+        let x = Math.floor(x1 / 75);
+        let y = Math.floor(y1 / 75);
         let offTop = Math.floor(wp.offsetTop / 75);
         let offLeft = Math.floor(wp.offsetLeft / 75);
         if (x1 >= 0 && x1 <= 600 && y1 >= 0 && y1 <= 600) {
@@ -42,22 +53,26 @@ const WhitePawnPiece = (props) => {
                 }
             }
         }
-        document.removeEventListener('click', move)
+        document.removeEventListener('mouseup', move);
+        document.removeEventListener('touchend', move);
         wp.style.backgroundColor = "transparent";
+
+
     }
 
     function choosePiece() {
         if (props.turn === "white") {
-            document.addEventListener('click', move);
+            document.addEventListener('mouseup', move);
+            document.addEventListener('touchend', move);
             let wp = document.getElementById("wp" + props.pawnID)
             wp.style.backgroundColor = "#aaaaaa";
         }
     }
 
 
-    return (
-        <img id={"wp" + id} className={"Figure wP"+id} src={wP} alt="wP"  onMouseDownCapture={choosePiece}/>
-    )
+        return (mobile ?(<img id={"wp" + id} className={"Figure wP" + id} src={wP} alt="wP" onTouchStartCapture={choosePiece}/>)
+        : <img id={"wp" + id} className={"Figure wP" + id} src={wP} alt="wP" onMouseDownCapture={choosePiece}/>)
+
 
 };
 

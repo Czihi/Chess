@@ -8,11 +8,19 @@ import {
 
 import Chessboard from "./components/Chessboard";
 import Gamedata from "./components/Gamedata";
-
+import mobile from "./components/Mobile";
 
 
 class App extends Component {
-
+    changeSize= () => {
+        let pieces;
+        if (mobile) {
+            pieces = document.getElementsByClassName('MiniFigure');
+            for (let i = 0; i < pieces.length; i++) {
+                pieces[i].style.maxWidth = "20px";
+            }
+        }
+    };
     state = {
         figures: [["black br0", "black bn0", "black bb0", "black bq", "black bk", "black bb1", "black bn1", "black br1"],
             ["black bp0", "black bp1", "black bp2", "black bp3", "black bp4", "black bp5", "black bp6", "black bp7"],
@@ -29,6 +37,7 @@ class App extends Component {
 
     render() {
         const fav=document.getElementById("fav");
+        this.changeSize();
         return (
             <Router>
                 <Route path="/Chess" exact render={
